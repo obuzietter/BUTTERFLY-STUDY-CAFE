@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100dvh;  
+}
+
+.main {
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  background: linear-gradient(to top, saddlebrown 40%, rgba(0, 0, 0, 0.5) 50%),
+  url('/images/my home 1.jpg');
+  background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content .par {
+  padding-bottom: 25px;
+  font-family: "DM Sans";
+}
+.page-header {
+  margin-bottom: 10px;
+}
+.content h1 {
+  font-family: "Times New Roman";
+  font-size: 43px;
+  font-weight: lighter;
+  padding: 4px;
+  animation: 1s ease-out 0s 1 slideInLeft;
+}
+
+.content .title {
+  font-family: "Times New Roman";
+  font-weight: lighter;
+  color: black;
+  padding: 8px;
+}
+.my-cards {
+  width: 100%;
+  display: flex;
+  
+}
+.my-cards .home-item:nth-child(odd) {
+  background-color: lightgray;
+}
+.my-cards .home-item:nth-child(even) {
+  background-color: grey;
+  color: white;
+
+}
+.my-cards .home-item {
+    animation: 1s ease-out 0s 1 slideInLeft;
+  width: 250px;
+  margin-left: 1rem;
+  margin-top: 5px;
+  padding: 5px;
+  color: black;
+  box-shadow: 7px 10px 12px rgba(255, 255, 255, 0.1);
+  transition: 0.7s;
+}
+.my-cards .home-item:nth-child(odd) h2 {
+  color: saddlebrown;
+  font-weight: bold;
+}
+.my-cards .home-item:nth-child(even) h2 {
+  color: saddlebrown;
+  font-weight: bold;
+}
+.my-cards .home-item:hover {
+  box-shadow: 7px 10px 12px black;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-400%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  

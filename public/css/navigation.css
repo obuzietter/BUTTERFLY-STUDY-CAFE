@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar{
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, .9);
+    display: flex;
+    padding: 10px;
+}
+
+.icon{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    color: saddlebrown;
+    font-size: 2rem;
+    font-family: 'Curlz MT';
+    
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    
+}
+
+ul li{
+    list-style: none;
+    padding: .5rem;
+    transition: .5s;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li:hover{
+    transform: scale(1.2);
+}
+
+ul li a:hover{
+    color: saddlebrown;
+    
+}
+
