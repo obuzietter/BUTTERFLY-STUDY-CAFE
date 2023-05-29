@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,26 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'signup');
-// Route::get('/', function(){
-//     return view('home');
-// });
 
-Route::view('services', 'services');
-Route::view('booking', 'booking');
-Route::view('about', 'about');
-Route::view('contact', 'contact');
-Route::view('navigation', 'navigation');
-Route::view('studyspace', 'studyspace');
-Route::view('laptopspace', 'laptopspace');
-Route::view('groupspace', 'groupspace');
-Route::view('restingarea', 'restingarea');
 
-Route::post('signup', function(){
-    $user = new User();
-    
-    $user->first_name = request('first_name');
-    $user->last_name = request('last_name');
-    $user->email = request('email');  
-    $user->password = request('password');
-    $user->save();
-});
+//navigating between login and signup pages
+Route::get('/login', [UserController::class, 'goToLogin']);
+Route::get('/signup', [UserController::class, 'goToSignup']);
+
+//posting the signup data
+Route::post('/signupUser', [UserController::class, 'signUp'])->name('register-user');
+
